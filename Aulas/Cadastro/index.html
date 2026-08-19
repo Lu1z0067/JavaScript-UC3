@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Faça seu Cadastro</h1>
+
+        <!-- Form -> Formulário (Campos para preencher). Ex: login -->
+        <form action="">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone">
+
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" id="idade">
+        </form>
+
+        <button id="enviar" onclick="cadastro()">Enviar</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

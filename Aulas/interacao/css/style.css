@@ -1,0 +1,22 @@
+#titulo {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+}
+
+.btn {
+    padding: 30px;
+    font-size: 22px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

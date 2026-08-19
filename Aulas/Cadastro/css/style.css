@@ -1,0 +1,85 @@
+/* " * " -> Asterisco são todas as TAGS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://i.redd.it/lfndtoirttvx.jpg");
+    background-size: cover;
+    /* Usar toda a vertical para */
+    height: 100vh;
+    display: flex;
+    /* Centralizando horizontalmente e verticalmente */
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+    /* red-green-blue-alpha(transparência) */
+    /* As cores são de 0 até 255 */
+    /* Alpha (transparência)  é de 0 a 1 (0% até 100%)*/
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 16px;
+    /* Desvio horizontal - Desvio Vertical - Esfumaçador - Cor */
+    box-shadow: 2px 2px 20px black;
+}
+
+form {
+    margin-top: 30px;
+    /* Organizar os label e input um em baixo do outro */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 18px;
+}
+
+label {
+    border-bottom: 1px solid #fff;
+    letter-spacing: 2px;
+}
+
+input {
+    width: 500px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+
+    /* Leve sombreamento/borda par texto */
+    text-shadow: 2px 2px 1px black;
+}
+
+/* Editando o botão pelo ID */
+
+#enviar {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid white;
+    margin-top: 40px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#enviar:hover {
+    transform: scale(1.03);
+    background-color: #fff0; /* 0 -> é o nivel de transparencia maxima, vai de 1 a 0. */
+    color: white;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+}

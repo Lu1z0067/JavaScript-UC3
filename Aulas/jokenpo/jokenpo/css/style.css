@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    /* ^ Controle total do tamanho das <tags> */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto';
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(90deg, #121216 0.000%, #121216 7.692%, #16171a calc(7.692% + 1px), #16171a 15.385%, #1a1b1f calc(15.385% + 1px), #1a1b1f 23.077%, #1f2023 calc(23.077% + 1px), #1f2023 30.769%, #232427 calc(30.769% + 1px), #232427 38.462%, #27282b calc(38.462% + 1px), #27282b 46.154%, #2b2c2f calc(46.154% + 1px), #2b2c2f 53.846%, #2f3033 calc(53.846% + 1px), #2f3033 61.538%, #323337 calc(61.538% + 1px), #323337 69.231%, #36373a calc(69.231% + 1px), #36373a 76.923%, #38393d calc(76.923% + 1px), #38393d 84.615%, #3b3c40 calc(84.615% + 1px), #3b3c40 92.308%, #3d3e42 calc(92.308% + 1px) 100.000%);
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: white;
+    width: 40%;
+    text-align: center;
+    gap: 15px;
+}
+
+/* ^ Editando o <h1>  que é FILHO DIRETO de .game */
+
+.game>h1{
+    font-size: 52px;
+    letter-spacing: 2px;
+}
+
+#pontos-jogador{
+    color: #235e72;
+    text-transform: uppercase;
+}
+
+
+#pontos-maquina{
+    color: #9c2525;
+    text-transform: uppercase;
+
+}
+
+.cartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+    gap: 15px;
+}
+
+#escolha{
+    font-size: 42px;
+}
+
+.card{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 25%;
+    height: 250px;
+    /* ^ Centralizar (x e y) da iamgem e nome da carta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* ^ Distancia entre img e h2 */
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.card:hover{
+    box-shadow: 0px 9px 8px gray;
+    transform: translateY(-10px);
+}
+
+.card h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 28px;
+}
+
+.card img{
+    width: 150px;
+}
+

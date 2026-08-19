@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Royale</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="descricao">
+        <h1>Clash Royale</h1>
+        <h3>Selecione sua classe</h3>
+   </div>
+
+    <div class="classes">
+        <div class="carta" id="guerreiro" onclick="classe('guerreiro')">
+            <h1>⚔️</h1>
+            <p>Guerreiro</p>
+        </div>
+        <div class="carta" id="arqueiro" onclick="classe('arqueiro')">
+            <h1>🏹</h1>
+            <p>Arqueiro</p>
+        </div>
+        <div class="carta" id="mago" onclick="classe('mago')">
+            <h1>🧙‍♂️</h1>
+            <p>Mago sabido</p>
+        </div>
+        <div class="carta" id="ladino" onclick="classe('ladino')">
+            <h1>🗡️</h1>
+            <p>Ladino</p>
+        </div>
+        <div class="carta" id="paladino" onclick="classe('paladino')">
+            <h1>🛡️</h1>
+            <p>Paladino</p>
+        </div>
+    </div>
+
+    <div class="battle">
+        <div class="luta">
+            <div class="carta">
+                <h1 id="player">👤</h1>
+                <p>Carta do Player</p>
+            </div>
+            <h1>⚔️</h1>
+            <div class="carta">
+                <h1 id="CPU">👤</h1>
+                <p>Carta da CPU</p>
+            </div>
+        </div>
+        <button onclick="luta()">Lutar</button>
+    </div>
+
+    <div class="placar">
+        <div class="pontuacaoPlayer" >
+            <h1>Pontuação do Player🫠</h1>
+            <h3>Pontos: <span id="pontuacaoPlayer">0</span></h3>
+        </div>
+
+        <div class="pontuacaoCPU"  >
+            <h1>Pontuação da CPU🤖</h1>
+            <h3>Pontos: <span id="pontuacaoCPU">0</span></h3>
+        </div>
+    </div>   
+
+    <script src="js/script.js"></script>
+</body>
+</html>

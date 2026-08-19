@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKENPO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game">
+        <h1>JOKENPO ✊✋✌️</h1>
+        <div class="placar">
+            <h1 id="pontos-jogador">Player Pontos: 0</h1>
+            <h1 id="pontos-maquina">Máquina Pontos: 0</h1>
+        </div>
+        <h1 id="escolha">Escolha sua Jogada: </h1>   
+        <div class="cartas">
+            
+            <div class="card" onclick="jogar('Pedra')">
+                <img src="img/rock.png" alt="">
+                <h2>Pedra</h2>
+            </div>
+
+            <div class="card" onclick="jogar('Papel')">
+                <img src="img/paper.png" alt="">
+                <h2>Papel</h2>
+            </div>
+
+            <div class="card" onclick="jogar('Tesoura')">
+                <img src="img/scissors.png" alt="">
+                <h2>Tesoura</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
