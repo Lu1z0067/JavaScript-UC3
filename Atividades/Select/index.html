@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input - Select</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- div.container>div.formulario>form -->
+    <div class="container">
+        <div class="formulario">
+            <form action="">
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+
+                <!-- Atributos das tags
+                type = tipo de input (Tipo do dado)
+                name = vai ser usado só no backend
+                id = para identificar no javascript aquela tag
+                action = usado no backend
+                placeholder = Texto prévio na caixa de texto -->
+
+                <select name="linguagem" id="linguagem">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="csharp">C#</option>
+                    <option value="ruby">Ruby</option>
+                </select>
+            </form>
+
+            <button id="selecionar">Selecione</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

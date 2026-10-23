@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="pagina ativo">
+        <h1>Cinema</h1>
+        <div class="movies">
+            <label for="">Filme</label>
+            <select name="" id="filme">
+                <option value="chefao">O Poderoso Chefão </option>
+                <option value="matrix">Matrix</option>
+                <option value="senhorAnel">O Senhor dos Anéis</option>
+                <option value="interestelar">Interestelar</option>
+                <option value="ryan">O resgate do soldado Ryan</option>
+            </select>
+
+            <label for="">Quantidade de Ingressos</label>
+            <input type="number" name="ingresso" id="ingresso" placeholder="Ingresso">
+
+            <button id="result">Confirmar</button>
+        </div>
+
+        <div class="info">
+            <h1>Filme</h1>
+            <div class="itens">
+                <div>
+                    <h2>Gênero</h2>
+                    <p id="genero">...</p>
+                </div>
+                <div>
+                    <h2>Código</h2>
+                    <p id="codigo">...</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <button class="btnNext">Próximo</button>
+    </div>
+    
+    <div class="pagina">
+        <div>
+            <h1>COMBOS DISPONÍVEIS</h1>
+            <table>
+                <tr>
+                    <th>CÓDIGO</th>
+                    <th>COMBO</th>
+                    <th>VALOR</th>
+                </tr>
+                <tr>
+                    <td>COMBO-005</td>
+                    <td>Doritos + Refri Lata</td>
+                    <td>R$ 15,90</td>
+                </tr>
+                <tr>
+                    <td>COMBO-072</td>
+                    <td>Pipoca Salgada + Copo de Coca Cola </td>
+                    <td>R$ 17,90</td>
+                </tr>
+                <tr>
+                    <td>COMBO-777</td>
+                    <td>Pipoca Doce + Copo de Suco</td>
+                    <td>R$ 14,90</td>
+                </tr>
+                <tr>
+                    <td>COMBO-215 </td>
+                    <td>Refil de Pipoca Salgada + 2 Recargas de Refri</td>
+                    <td>R$ 25,90</td>
+                </tr>
+            </table>
+        </div>
+
+        <label for="cod">Digite o Código</label>
+        <input type="text" name="cod" id="cod" placeholder="Código">
+
+        <div>
+            <button class="btnLast">Anterior</button>
+            <button class="btnNext">Próximo</button>
+        </div>
+    </div>
+
+    <div class="pagina">
+        <h1>Resultado</h1>
+        <h2>Filme: <span id="filmes"></span></h2>
+        <h2>Ingressos: <span id="ingressos"></span></h2>
+        <h2>Combo: <span id="combos"></span></h2>
+
+        <button id="voltar">Confirmar</button>
+    </div>
+
+
+
+    <script src="js/pages.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

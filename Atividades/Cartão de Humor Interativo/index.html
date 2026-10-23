@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Humor Interativo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="caixa">
+        <h1>Cartão de Humor Interativo</h1>
+        <div class="usuario">
+            <label for="">Nome</label>
+            <input type="text" id="nome">
+        </div>
+        <div class="humor">
+            <h1>Selecione seu humor</h1>
+            <button id="feliz" onclick="usuarioHumor('feliz')">Feliz😀</button>
+            <button id="cansado" onclick="usuarioHumor('cansado')">Cansado🥱</button>
+            <button id="bravo" onclick="usuarioHumor('bravo')">Bravo😡</button>
+        </div>
+        <button onclick="exibir()">Exibir</button>
+    </div>
+
+    <div class="caixa2">
+        <h1 id="result"></h1>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

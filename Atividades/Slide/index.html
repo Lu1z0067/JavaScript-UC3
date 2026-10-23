@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slides manuais e automaticos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="titulo">Meus slides</h1>
+    <div class="container">
+        <!-- Primeiro Slide -->
+        <div class="slide ativo">
+            <h2>Slide 1</h2>
+            <p>Bem vindo ao sistema!</p>
+        </div>
+        <div class="slide">
+            <h2>Slide 2</h2>
+            <p>Sistema feito em JavaScript</p>
+        </div>
+        <div class="slide">
+            <h2>Slide 3</h2>
+            <p>Os slides também passam automaticamente</p>
+        </div>
+        <div class="slide">
+            <h2>Slide 4</h2>
+            <p>Também podemos usar os botões</p>
+        </div>
+        <!-- div.slide*4>h2{Slide $}+p{Mensagem} -->
+
+    </div>
+
+    <div class="botoes">
+        <button onclick="slideAnterior()">Anterior</button>
+        <button onclick="proximoSlide()">Próximo</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

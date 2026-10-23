@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Filme🎬</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="quiz ativo">
+        <div class="questao">
+            <h1>Quiz Filme🎬</h1>
+            <h2 id="pergunta"></h2>
+            <p id="qualPergunta"></p>
+            <img id="imagens" src="img/f1_1.webp" alt="">
+
+            <div id="alternativas">
+                <!-- Aqui fica as alternativas, mas tudo está no JS -->
+            </div>
+
+            <div class="ntx">
+                <button id="next" onclick="proximaPergunta()">Proximo</button>
+            </div>
+        </div>
+    </main>
+
+    <main class="fim">
+        <h1>Fim do Quiz🎉</h1>
+        <h3>Obrigado por jogar</h3>
+
+        <p>Você acertou <span id="pontos"></span> Perguntas!</p>
+
+        <img id="resultImg" src="img/dislike.jpg" alt="">
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

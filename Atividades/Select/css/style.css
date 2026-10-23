@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+form {
+    padding: 30px;
+}
+
+input {
+    padding: 15px;  
+    font-size: 22px; 
+}
+
+select {
+    width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    color: darkgreen;
+    background-color: aliceblue;
+    border: 2px solid #555;
+    border-radius: 8px;
+
+    /*  Mudar o mouse ao passar sobre a tag */
+    cursor: pointer;
+}
+
+/* Efeito hover -> O que acontece ao passar o mouse sobre a tag */
+select:hover {
+    border-color: blue;
+    background-color: cornflowerblue;
+}
+
+/* Muda quando a tag está selecionada (clicada) */
+select:focus {
+    border-color: orange;
+    /* Outline -> traçado */
+    outline: none;
+}
