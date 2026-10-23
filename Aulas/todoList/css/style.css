@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    display: flex;
+    /* Flex-start = começa verticalmente alinhado ao topo */
+    align-items: flex-start;
+    width: 100%;
+    /* Altura mínima = Tela toda (O site usa a tela toda verticalmente) */
+    /* De inicio um <div> usa toda a horizontal (width) porém a altura (height) ele só usa o que ele "ocupa" para usar tudo aplicamos "100vh" */
+    min-height: 100vh;
+    /* "deg" no background: linear-gradient = o angulo da cor de fundo */
+    background: linear-gradient(135deg, rgb(0, 153, 255), rgb(0, 70, 199));
+    padding: 10px;
+}
+
+.task-app {
+    /* A diferença entre width e max-width=
+    width é a largura que ele "TENTARÁ" alcançar (100% a largura do pai dele o container) mas quando usa-se o "max-width" junto o "max" será o limite dele. */
+    /* Se a tela do dispositivo for menor que 540px de largura, então ele obedecerá a regra de 100% width. SENÃO ele limitará a 540px */
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.task-app h2{
+    color: #777683;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.task-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    /* Flex 1 = já que o pai deles (.row) é flex. O input flex 1 representa tamanho comum para ele*/
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #ff5945;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    /* Não permite o usuário selecionar o texto da tarefa */
+    user-select: none;
+    cursor: pointer;
+    /* Posicionamento relativo = Quase igual ao comum (Sem definir position). Porém aqui
+    ele permite posicionar à vontade e tem um EFEITO ESPECIAL quando algum item dentro dele é position absolute */
+    position: relative;
+}
+
+/* Dois "dois pontos" :: Pseudo elemento
+É quase como uma "tag fake" colocado ANTES do <li> (A esquerda) */
+ul li::before {
+    /* Content = Conteúdo:
+    O que estará escrito dentro da tag fake <fake>~aqui~</fake> */
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(../img/desmarcado.png);
+    background-size: cover;
+    background-position: center;
+    /* Posicionando o elemento com o top e left */
+    top: 15px;
+    left: 8px;
+    transition: all 0.3s;
+}
+
+/* Para os <li> com classe "checked" */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* Antes dos <li> marcados */
+ul li.checked::before {
+    background-image: url(../img/marcado.png);
+}
+
+li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+li span:hover {
+    background-color: #edeef0;
+}
