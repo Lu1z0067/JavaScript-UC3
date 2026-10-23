@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#531501">
+    <meta name="description" content="Doce Encanto — confeitaria artesanal, doces, bolos, ingredientes e embalagens.">
+    <title>Doce Encanto | Confeitaria Artesanal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="topo" id="inicio">
+        <a class="marca" href="#inicio" aria-label="Doce Encanto - início">
+            <img src="img/logo.png" alt="Logo Doce Encanto" class="logo" onerror="this.style.display='none'">
+            <span class="marca-texto"><strong>Doce Encanto</strong><small>Confeitaria Artesanal</small></span>
+        </a>
+
+        <form class="pesquisa" id="formPesquisa" role="search">
+            <label class="sr-only" for="campoPesquisa">Buscar produtos</label>
+            <input type="search" id="campoPesquisa" placeholder="O que você está procurando?" autocomplete="off">
+            <button type="submit" aria-label="Buscar">⌕</button>
+        </form>
+
+        <button class="botao-carrinho" id="abrirCarrinho" type="button" aria-label="Abrir carrinho">
+            <span aria-hidden="true">🛒</span>
+            <span>Carrinho</span>
+            <span class="contador-carrinho" id="contadorCarrinho">0</span>
+        </button>
+    </header>
+
+    <nav class="navegacao" aria-label="Navegação principal">
+        <a href="#destaque">Destaques</a>
+        <a href="#natal">Natal</a>
+        <a href="#halloween">Halloween</a>
+        <a href="#ingrediente">Ingredientes</a>
+        <a href="#embalagens">Embalagens</a>
+        <a href="#sobre">Sobre</a>
+    </nav>
+
+    <main>
+        <section class="hero" aria-label="Destaques da confeitaria">
+            <img src="img/bolo.png" alt="Produto em destaque da Doce Encanto" id="imagemDestaque">
+            <div class="hero-conteudo">
+                <p class="sobretitulo">Feito com carinho</p>
+                <h1>Pequenos doces,<br>grandes momentos.</h1>
+                <p>Encontre delícias para presentear, comemorar e deixar qualquer dia mais doce.</p>
+                <a class="botao-principal" href="#destaque">Ver produtos</a>
+                <div class="indicadores-slide" aria-label="Escolher imagem em destaque">
+                    <button type="button" class="ponto-slide ativo" data-slide="0" aria-label="Ver destaque 1"></button>
+                    <button type="button" class="ponto-slide" data-slide="1" aria-label="Ver destaque 2"></button>
+                    <button type="button" class="ponto-slide" data-slide="2" aria-label="Ver destaque 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="beneficios" aria-label="Informações de compra">
+            <article class="beneficio">
+                <span class="beneficio-icone" aria-hidden="true">🚚</span>
+                <div><h2>Frete e entrega</h2><p>Consulte as opções disponíveis</p></div>
+            </article>
+            <article class="beneficio">
+                <span class="beneficio-icone" aria-hidden="true">📍</span>
+                <div><h2>Retirada</h2><p>Combine o local e o horário</p></div>
+            </article>
+            <article class="beneficio">
+                <span class="beneficio-icone" aria-hidden="true">💳</span>
+                <div><h2>Pagamento</h2><p>Consulte as formas disponíveis</p></div>
+            </article>
+        </section>
+
+        <div class="aviso-busca" id="avisoBusca" hidden></div>
+
+        <section class="secao-produtos" id="destaque">
+            <div class="titulo-secao"><p class="sobretitulo">Escolhas especiais</p><h2>Produtos em destaque</h2><p>Alguns favoritos para adoçar seu dia.</p></div>
+            <div class="grade-produtos" id="produtosDestaque"></div>
+        </section>
+
+        <section class="secao-produtos secao-alternada" id="natal">
+            <div class="titulo-secao"><p class="sobretitulo">Temporada festiva</p><h2>Encantos de Natal</h2><p>Sabores e presentes para compartilhar.</p></div>
+            <div class="grade-produtos" id="produtosNatal"></div>
+        </section>
+
+        <section class="secao-produtos" id="halloween">
+            <div class="titulo-secao"><p class="sobretitulo">Doces assustadoramente bons</p><h2>Especial Halloween</h2><p>Uma dose de diversão em cada mordida.</p></div>
+            <div class="grade-produtos" id="produtosHalloween"></div>
+        </section>
+
+        <section class="secao-produtos secao-alternada" id="ingrediente">
+            <div class="titulo-secao"><p class="sobretitulo">Para suas receitas</p><h2>Ingredientes culinários</h2><p>Itens para criar suas próprias delícias.</p></div>
+            <div class="grade-produtos" id="produtosIngrediente"></div>
+        </section>
+
+        <section class="secao-produtos" id="embalagens">
+            <div class="titulo-secao"><p class="sobretitulo">Apresente com carinho</p><h2>Embalagens</h2><p>Detalhes que deixam seus doces ainda mais especiais.</p></div>
+            <div class="grade-produtos" id="produtosEmbalagem"></div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="sobre-selo" aria-hidden="true">♡</div>
+            <div>
+                <p class="sobretitulo">Nossa essência</p>
+                <h2>Feito com carinho, pensado para encantar.</h2>
+                <p>A Doce Encanto reúne doces, ingredientes e embalagens para transformar ideias e momentos especiais em lembranças gostosas.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <a href="#inicio" class="rodape-marca">Doce Encanto <span>Confeitaria Artesanal</span></a>
+        <p>Feito com carinho e um toque de doçura.</p>
+        <small>© <span id="anoAtual"></span> Doce Encanto. Todos os direitos reservados.</small>
+    </footer>
+
+    <div class="fundo-modal" id="fundoModal" hidden></div>
+    <aside class="painel-carrinho" id="painelCarrinho" aria-labelledby="tituloCarrinho" aria-hidden="true">
+        <div class="carrinho-topo">
+            <div><p class="sobretitulo">Sua seleção</p><h2 id="tituloCarrinho">Meu carrinho</h2></div>
+            <button class="botao-fechar" id="fecharCarrinho" type="button" aria-label="Fechar carrinho">×</button>
+        </div>
+        <div class="itens-carrinho" id="itensCarrinho">
+            <p class="carrinho-vazio">Seu carrinho ainda está vazio. Escolha algo delicioso! 🍰</p>
+        </div>
+        <div class="carrinho-rodape">
+            <div class="total-linha"><span>Total</span><strong id="totalCarrinho">R$ 0,00</strong></div>
+            <button class="botao-principal botao-finalizar" id="finalizarPedido" type="button">Continuar pedido</button>
+            <p class="nota-carrinho">Este catálogo é uma demonstração. O pedido ainda precisa ser confirmado com a confeitaria.</p>
+        </div>
+    </aside>
+
+    <dialog class="dialog-pedido" id="dialogPedido">
+        <form method="dialog" class="dialog-conteudo">
+            <button class="botao-fechar fechar-dialogo" aria-label="Fechar">×</button>
+            <p class="sobretitulo">Quase lá!</p>
+            <h2>Resumo do pedido</h2>
+            <p id="resumoPedido"></p>
+            <p class="nota-carrinho">A finalização de pagamento online ainda não está conectada. Use este resumo para conferir os itens antes de combinar o pedido.</p>
+            <button class="botao-principal" value="fechar">Entendi</button>
+        </form>
+    </dialog>
+</body>
+</html>
