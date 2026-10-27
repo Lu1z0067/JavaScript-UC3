@@ -9,6 +9,7 @@
     --cor-secundaria: #FFD966;
     --cor-terciaria: #FFF1D6;
     --cor-fundo: tan;
+    --cor-fundo-secundaria: rgb(224, 189, 148);
 }
 
 body {
@@ -17,6 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: var(--cor-principal);
 }
 
 .pesquisa {
@@ -43,7 +45,6 @@ input {
     border-radius: 10px;
     border: var(--cor-principal) solid 2.5px;
     background-color: var(--cor-terciaria);
-    color: var(--cor-principal);
 }
 
 input::placeholder {
@@ -62,6 +63,10 @@ a {
     font-weight: bolder ;
     color: var(--cor-principal);
     transition: all 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a:hover {
@@ -119,14 +124,14 @@ img {
     display: block;
 }
 
-#cart {
+.cart {
     position: fixed;
     top: 50px;
     right: 50px;
     width: 60px;
 }
 
-#cart button {
+.cart button {
     border: none;
     border-radius: 50%;
     background-color: var(--cor-terciaria);
@@ -157,14 +162,34 @@ img {
     height: 40px;
 }
 
-.imgProdutos {
+.item .imgProdutos {
+    display: block;
     width: 400px;
+    height: 300px;
+    border-radius: 16px 16px 0px 0px    ;
+    /* Preenche todo o espaço sem distorcer a imagem */
+    object-fit: cover;
+    /* Centraliza a imagem para mostrar a parte central da foto */
+    object-position: center;
+    transition: all 0.3s;
 }
 
-#produtosDestaque, #produtosNatal, #produtosHalloween, #produtosIngrediente {
+.item .imgProdutos:hover {
+    transform: scale(1.02);
+}
+
+#produtosDestaque, #produtosNatal, #produtosHalloween, #produtosIngrediente, #produtosEmbalagem {
     display: flex;
     flex-wrap: wrap;
     gap: 100px;
+}
+
+#natal {
+    background-color: var(--cor-fundo-secundaria);
+}
+
+#ingrediente {
+    background-color: var(--cor-fundo-secundaria);
 }
 
 .itens {
@@ -180,29 +205,83 @@ img {
 .item {
     background-color: var(--cor-secundaria);
     border-radius: 16px;
-    padding: 30px;
+    /* Impede que a imagem ultrapasse os cantos arredondados */
+    overflow: hidden;
+}
+
+.itens h1{
+    padding: 20px;
+    font-family: serif;
+    font-size: 50px;
+    color: var(--cor-principal);
+}
+
+.itens h3, .itens p {
+    color: var(--cor-principal);
+}
+
+.itens h4 {
+    padding: 10px 0px 0px 10px;
+    opacity: 50%;
+}
+
+.itens h3 {
+    font-family: serif;
+    font-size: 28px;
+    padding: 10px 0px 0px 10px;
+}
+
+.itens p {
+    font-size: 26px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.valores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.soma, .subtrai {
+    background-color: greenyellow;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 8px;
+    color: var(--cor-principal);
+    font-weight: bolder;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.item img {
-    width: 380px;
-    height: 300px;
-    border-radius: 16px;
+.subtrai {
+    background-color: rgb(197, 48, 48);
 }
 
-.itens h1 {
+#adicionar {
+    border: none;
+    background-color: var(--cor-principal);
     padding: 20px;
-    color: var(--cor-principal);
+    font-size: 18px;
+    color: var(--cor-secundaria);
+    width: 100%;
+    cursor: pointer;
 }
 
 .pagamento {
     display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
+    /* Fixa a div na tela */
+    position: fixed;
+    /* só se usa o top e left, quando é usado o position */
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%); /* Centraliza a div */
     background-color: var(--cor-fundo);
     border-radius: 16px;
-    padding: 100px;
+    padding: 50px;
 }
 
 footer {
